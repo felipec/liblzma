@@ -2,9 +2,24 @@
 
 src="$1"
 
-mkdir -p check common delta lz lzma rangecoder simple xz
+mkdir -p api/lzma check common delta lz lzma rangecoder simple xz
 
 list='
+api/lzma.h
+api/lzma/base.h
+api/lzma/bcj.h
+api/lzma/block.h
+api/lzma/check.h
+api/lzma/container.h
+api/lzma/delta.h
+api/lzma/filter.h
+api/lzma/hardware.h
+api/lzma/index.h
+api/lzma/index_hash.h
+api/lzma/lzma12.h
+api/lzma/stream_flags.h
+api/lzma/version.h
+api/lzma/vli.h
 common/common.c
 common/common.h
 common/memcmplen.h

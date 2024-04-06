@@ -30,8 +30,8 @@ override CPPFLAGS += -DTUKLIB_PHYSMEM_$(PHYSMEM_METHOD)
 override CPPFLAGS += -DTUKLIB_FAST_UNALIGNED_ACCESS
 override CPPFLAGS += -DTUKLIB_SYMBOL_PREFIX=lzma_
 
-override LDLIBS := -lpthread
-override LDFLAGS := -Wl,-soname -Wl,liblzma.so.5 -Wl,--no-undefined
+override LDLIBS += -lpthread
+override LDFLAGS += -Wl,-soname -Wl,liblzma.so.5 -Wl,--no-undefined
 
 ifdef COND_SYMVERS_GENERIC
 override LDFLAGS += -Wl,--version-script=liblzma_generic.map
